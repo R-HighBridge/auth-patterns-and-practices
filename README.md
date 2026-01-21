@@ -1,16 +1,14 @@
 # Auth Patterns: OIDC/OAuth 2.0 for Modern Frontend
 
-実務での開発経験に基づき、React/Next.js を用いたフロントエンド開発における認証・認可の実装パターンと、マルチベンダー環境でのセキュリティ・設計上の考慮事項を体系化しています。
-
----
+実務経験に基づき、React 19 / Next.js 15 を用いた認証・認可の実装パターンと、マルチベンダー環境での設計思想を体系化したリポジトリです。
 
 ## 1. 概要と採用アーキテクチャ
 
-本リポジトリでは、以下の技術的課題に対するプラクティスをまとめています。
+本リポジトリでは、以下の技術的課題に対する解決策を提示します。
 
-- **フロー:** Authorization Code Flow with PKCE (RFC 7636)
+- **認証フロー:** Authorization Code Flow with PKCE (RFC 7636)
 - **管理対象:** JWT (ID Token / Access Token) の安全なハンドリング
-- **設計:** マルチベンダー開発における BE/FE インターフェースの疎結合化
+- **設計思想:** BE/FE の疎結合化とインターフェースの先行定義
 
 ### シーケンス図 (Mermaid)
 
@@ -38,4 +36,5 @@ sequenceDiagram
 
     FE->>BE: APIリクエスト (Authorization: Bearer <Access Token>)
     BE-->>FE: リソース返却
+
 ```
