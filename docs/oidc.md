@@ -25,13 +25,10 @@ OpenID Connect (OIDC) を理解するためには、その土台である **OAut
 ```mermaid
 graph TD
     subgraph OIDC ["OpenID Connect 1.0"]
-        A[ID Token / UserInfo / Claims]
     end
     subgraph OAuth ["OAuth 2.0"]
-        B[Access Token / Scopes]
     end
     subgraph HTTP ["Transport Layer"]
-        C[HTTP / TLS]
     end
     OIDC -->|Extension| OAuth
     OAuth -->|Base| HTTP
